@@ -1,7 +1,7 @@
 %with all three parameters
-%J = checkerboard(40,4,4);
+J = checkerboard(30);
 %By default
-J=checkerboard(30, 5, 6);
+%J=checkerboard(30, 5, 6);
 %to store image reference
 %J_ref = imref2d(size(J));
 %.............

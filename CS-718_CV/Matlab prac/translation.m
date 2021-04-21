@@ -1,28 +1,25 @@
+%Translation
 sqsize = 60;
 I = checkerboard(sqsize,4,4);
-%nrows = size(I,5);
-%ncols = size(I,7);
+
 fill = 0.2;
 
-%imshow(I)
-%title('Original')
 
-% Try varying these 4 parameters.
-%scale = 1.2;       % scale factor
-%angle = 40*pi/360; % rotation angle
-tx = 100;            % x translation
-ty = 200;            % y translation
+tx = 400;            % x translation
+ty = 500;            % y translation
 
-%sc = cos(angle);
-%ss = sin(angle);
+
 
 T = [ 1 0  0;
      0  1  0;
       tx  ty  1];
   
-t_nonsim = affine2d(T);
-[I_nonreflective_similarity,RI] = imwarp(I,t_nonsim,'FillValues',fill);
+t_translation = affine2d(T);
 
-imshow(I_nonreflective_similarity, RI);
+%[I_nonreflective_similarity,RI] = imwarp(I,t_translation,'FillValues',fill);
+
+I_output = imwarp(I,t_translation,'FillValues',fill);
+
+imshow(I_output);
 axis on
-title('Nonreflective Similarity')
+title('Translation performed')

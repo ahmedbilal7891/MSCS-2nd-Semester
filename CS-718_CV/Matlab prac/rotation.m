@@ -1,12 +1,8 @@
 %Rotation
 sqsize = 60;
 I = checkerboard(sqsize,4,4);
-%nrows = size(I,5);
-%ncols = size(I,7);
-fill = 0.2;
 
-%imshow(I)
-%title('Original')
+fill = 0.2;
 
 q = 90;
 
@@ -14,9 +10,11 @@ q = 90;
 T = [cos(q)  sin(q)  0; 
      -sin(q)    cos(q)  0;
      0    0  1];
-t_aff = affine2d(T);
-I_affine = imwarp(I,t_aff,'FillValues',fill);
 
+ t_rotation = affine2d(T);
+I_output = imwarp(I,t_rotation,'FillValues',fill);
+
+
+imshow(I_output)
 axis on
-imshow(I_affine)
-title('Affine')
+title('Rotation')

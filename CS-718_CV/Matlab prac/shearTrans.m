@@ -1,19 +1,25 @@
-%Shear
+%Shear transformation through matrix
 sqsize = 60;
-I = checkerboard(sqsize,4,4);
 
-fill = 0.2;
+I = checkerboard(60,4,4);
 
-
-
+fill = 0.6;
 
 % Try varying the definition of T. as shear
-T = [1  20  0; 
-     40    1  0;
+T = [1  2  0; 
+     3    1  0;
      0    0  1];
  
 t_Shear = affine2d(T);
-I_Output = imwarp(I,t_Shear,'FillValues',fill);
+final_img = imwarp(I,t_Shear,'FillValues',fill);
 
-imshow(I_Output)
-title('Shear')
+%output formating
+subplot(1, 2, 1);
+imshow(I);
+axis on;
+title("orignal image");
+
+subplot(1, 2, 2);
+imshow(final_img);
+axis on;
+title("final image");

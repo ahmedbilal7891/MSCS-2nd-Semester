@@ -1,0 +1,17 @@
+
+I = checkerboard(50, 5, 5);
+
+T = [1 0 0; 0 1 0; 300 400 1];
+
+transf_obj = affine2d(T);
+
+final_img = imwarp(I, transf_obj);
+
+subplot(1, 2, 1);
+imshow(I);
+title("orignal image");
+
+subplot(1, 2, 2);
+imshow(final_img);
+axis on;
+title("final image");

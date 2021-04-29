@@ -1,7 +1,10 @@
 %with all three parameters
-J = checkerboard(30);
+
+%J = checkerboard(50);
 %By default
-%J=checkerboard(30, 5, 6);
+
+J=checkerboard(50, 5, 7);
+
 %to store image reference
 %J_ref = imref2d(size(J));
 %.............
@@ -13,5 +16,5 @@ J = checkerboard(30);
 %ncols = size(J,5);
 %fill = 0.3;
 
-figure
+figure;
 imshow(J)

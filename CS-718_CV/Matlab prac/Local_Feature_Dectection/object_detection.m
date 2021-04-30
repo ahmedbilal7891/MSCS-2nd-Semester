@@ -1,17 +1,18 @@
 %object detection
 %%%%%%%%%%%%%%%%%
 %object to be detection
-%boxImage = imread('stapleRemover.jpg');
-boxImageX = imread('F:\Ahmed_Bilal\MS_EDu\Classes\Semester-2-atum-2021\Classes\CS-718_CV\Matlab prac\images\singleCycle.jpeg');
-boxImage = rgb2gray(boxImageX);
+
+boxImage = imread('stapleRemover.jpg');
+%boxImageX = imread('F:\Ahmed_Bilal\MS_EDu\Classes\Semester-2-atum-2021\Classes\CS-718_CV\Matlab prac\images\singleCycle.jpeg');
+%boxImage = rgb2gray(boxImageX);
 figure;
 imshow(boxImage);
 title('Image of a Box');
 
 %cluttered image
-%sceneImage = imread('clutteredDesk.jpg');
-sceneImageX = imread('F:\Ahmed_Bilal\MS_EDu\Classes\Semester-2-atum-2021\Classes\CS-718_CV\Matlab prac\images\ClutteredCycle.jpg');
-sceneImage = rgb2gray(sceneImageX);
+sceneImage = imread('clutteredDesk.jpg');
+%sceneImageX = imread('F:\Ahmed_Bilal\MS_EDu\Classes\Semester-2-atum-2021\Classes\CS-718_CV\Matlab prac\images\ClutteredCycle.jpg');
+%sceneImage = rgb2gray(sceneImageX);
 figure;
 imshow(sceneImage);
 title('Image of a Cluttered Scene');
@@ -55,7 +56,7 @@ title('Putatively Matched Points (Including Outliers)');
 
 %Locate the Object in the Scene Using Putative Matches
 [tform, inlierBoxPoints, inlierScenePoints] = ...
-    estimateGeometricTransform(matchedBoxPoints, matchedScenePoints, 'affine');
+    estimateGeometricTransform(matchedBoxPoints, matchedScenePoints, 'similarity');
 
 %Display the matching point pairs with the outliers removed
 figure;

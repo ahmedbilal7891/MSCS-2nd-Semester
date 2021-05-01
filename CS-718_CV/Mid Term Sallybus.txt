@@ -1,15 +1,6 @@
-1. Introduction to Computer Vision
-     Basic Components 
-3. Understanding of Imagery Data and processing
-     Digital Image & digital image processing
-      Sampling and quantization 
-     Pixel
-
-ASSIGNENTS 
-
+Below is the course for MID Exam (CS-718)                                                                                                                      1. Introduction to Computer Vision (slides)
+2. Understanding of Imagery Data and processing (All Slides)
+3. Basic Image Processing function (MATLAB)                                                                                                                                                                                  ASSIGNMENTS 
 1. Introduction to Computer Vision (Wikipedia)
 2. Introduction to Digital Image (Wikipedia)
 3. Introduction to Digital Image Processing (Wikipedia)
-5. Introduction to MATLAB
-      Data Types
-      Operations and Operators
